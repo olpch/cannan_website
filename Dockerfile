@@ -47,6 +47,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+ENV NEXT_PRIVATE_HOST=0.0.0.0
 
 COPY --from=builder --chown=node:node /app/public ./public
 
