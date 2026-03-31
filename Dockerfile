@@ -45,7 +45,7 @@ FROM node:${NODE_VERSION} AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PORT=3001
 ENV HOSTNAME="0.0.0.0"
 
 COPY --from=builder --chown=node:node /app/public ./public
@@ -58,6 +58,6 @@ COPY --from=builder --chown=node:node /app/.next/static ./.next/static
 
 USER node
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD ["node", "server.js"]
