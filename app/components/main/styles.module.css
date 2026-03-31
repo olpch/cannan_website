@@ -1,0 +1,13 @@
+@reference "../../globals.css";
+
+.timeline--item::ater {
+  content: '';
+
+  @apply text-center text-black pt-10;
+
+  border-left: 3px dashed #fff;
+  border-top: 3px dashed #f24;
+  border-rigth: 3px dashed #f24;
+  border-bottom: 3px dashed #fff;
+  border-radius: 50% 50% 0 0;
+}
