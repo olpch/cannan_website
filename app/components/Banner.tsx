@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
-    src?: string;
     title: string;
     subTitle: string;
+    h2?: boolean;
+    src?: string;
     isVideo?: boolean;
 }
 
@@ -31,17 +32,30 @@ function setBackgroundMedia(title: string, src: string, isVideo: boolean) {
     }
 }
 
-export default function GlobalBanner(
-    { title, subTitle, isVideo = false, src = '/imgs/global_banner.jpg'}: Props
+function getTitle(title: string, subTitle: string, h2: boolean) {
+
+    if(h2)
+        return <>
+                <h2 className="text-4xl md:text-xl text-[#A6F0FF] leading-tight">{ title }</h2>
+                <p className="mt-4 text-lg text-gray-200">{ subTitle }</p>
+            </>
+    else
+        return <>
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">{ title }</h1>
+            <p className="mt-4 text-lg text-gray-200">{ subTitle }</p>
+        </>
+}
+
+export default function Banner(
+    { title, subTitle, h2 = false, isVideo = false, src = '/imgs/global_banner.jpg'}: Props
 ) {
     return (
         <section className="relative h-[485px] w-full overflow-hidden">
             { setBackgroundMedia(title, src, isVideo) }
-            <div className="absolute inset-0 bg-[#0B3C5D]/60"></div>
+            <div className="absolute inset-0 bg-[#06264d]/70"></div>
             <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
-            <div className="max-w-2xl text-white">
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight">{ title }</h1>
-                <p className="mt-4 text-lg text-gray-200">{ subTitle }</p>
+            <div className="max-w-2xl text-white"> 
+                { getTitle(title, subTitle, h2) }
                 <div className="mt-8 flex justify-center gap-4">
                     {
                         isVideo &&

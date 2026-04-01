@@ -4,12 +4,7 @@ import ProjectsTypes from "./components/main/ProjectsTypes";
 import LatestProjects from "./components/main/LatestProjects";
 import WhyChoose from "./components/main/WhyChoose";
 import ServicesList from "./components/main/ServicesList";
-import GlobalBanner from "./components/GlobalBanner";
-
-export const metadata: Metadata = {
-  title: 'Cannan App',
-  description: 'Structural Engineering Drawings Signed & Sealed',
-}
+import Banner from "./components/Banner";
 
 const bannerInfo = {
   isVideo: true,
@@ -22,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <GlobalBanner {...bannerInfo} />
+      <Banner {...bannerInfo} />
       <ServicesList />
       <ProjectsTypes />
       <ProcessTimeline />

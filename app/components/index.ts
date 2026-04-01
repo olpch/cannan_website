@@ -3,7 +3,7 @@ export * from "./Header";
 export * from "./Footer";
 export * from "./CallToAction";
 
-export * from "./GlobalBanner";
+export * from "./Banner";
 export * from "./main/WhyChoose";
 export * from "./main/ServicesList";
 export * from "./main/ProjectsTypes";

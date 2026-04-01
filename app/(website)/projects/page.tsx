@@ -1,4 +1,4 @@
-import GlobalBanner from "@/app/components/GlobalBanner";
+import Banner from "@/app/components/Banner";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,16 +12,16 @@ const proyectos = Array.from({ length: 6 }).map((project, index) => ({
 export default function ProyectPage() {
   return (
     <>
-      <GlobalBanner
+      <Banner
         title="Projects"
         subTitle="Explore a selection of structural projects, including detailed drawings and engineered solutions for residential and commercial applications."
       />
       <section className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 p-6">
         {
           proyectos.map(project => {
-            return <div className="mx-auto right-0 mt-2 w-60">
+            return <div className="mx-auto right-0 mt-2 w-80 md:w-60">
               <div className="bg-white rounded overflow-hidden shadow-lg">
-                <div className="relative h-48 w-full">
+                <div className="relative h-60 w-full md:h-48">
                   <Image
                     fill
                     src={project.image}

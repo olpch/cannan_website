@@ -21,7 +21,7 @@ export default function WhyChoose() {
         <div className="bg-[#0B3A5B] text-white p-8 md:p-16 flex flex-col justify-center space-y-8">
           <div className="flex items-center gap-4">
             <div className="bg-cyan-500/20 p-3 rounded-md">
-              <Image src="/imgs/building.svg" alt="building icon" height={20} width={20} />
+              <Image src="/imgs/building.svg" alt="building icon" height={20} width={20} className="h-8 w-8" />
             </div>
             <div>
               <p className="text-2xl font-bold">100+</p>
@@ -31,7 +31,7 @@ export default function WhyChoose() {
           <hr className="border-gray-500/30" />
           <div className="flex items-center gap-4">
             <div className="bg-cyan-500/20 p-3 rounded-md">
-              <Image src="/imgs/briefcase.svg" alt="briefcase icon" height={10} width={20} />
+              <Image src="/imgs/briefcase.svg" alt="briefcase icon" height={10} width={20} className="h-8 w-8" />
             </div>
             <div>
               <p className="text-2xl font-bold">10 years</p>
@@ -41,7 +41,7 @@ export default function WhyChoose() {
           <hr className="border-gray-500/30" />
           <div className="flex items-center gap-4">
             <div className="bg-cyan-500/20 p-3 rounded-md">
-              <Image src="/imgs/cup.svg" alt="cup icon" height={10} width={20} />
+              <Image src="/imgs/cup.svg" alt="cup icon" height={10} width={20} className="h-8 w-8" />
             </div>
             <div>
               <p className="text-2xl font-bold">Professionals</p>

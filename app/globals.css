@@ -22,7 +22,7 @@
 body {
   background: #fff;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
   @apply flex flex-col items-center;
 
 }
