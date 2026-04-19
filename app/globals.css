@@ -20,11 +20,15 @@
 }
 
 body {
-  background: #fff;
+  background: #f5f6f7;
   color: var(--foreground);
   font-family: var(--font-inter);
   @apply flex flex-col items-center;
 
+}
+
+.container--page {
+  border: 1px solid #eeeff1;
 }
 
 .container--page {

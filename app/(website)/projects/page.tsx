@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const proyectos = Array.from({ length: 6 }).map((project, index) => ({
-  id: `Project-${index + 1}`,
+  id: `project_${index + 1}`,
   name: 'Pergola structure',
   description: 'Structural design and drawing',
   image: '/imgs/projects/project_0.jpg'
@@ -35,7 +35,7 @@ export default function ProyectPage() {
                         { project.name}
                       </p>
                       <p className="text-xs text-gray-500 mb-2">{ project.description }</p>
-                      <Link href="/account/campaigns" className="text-[#3A9BC6] text-xs">View project</Link>
+                      <Link href={`/projects/${project.id}`} className="text-[#3A9BC6] text-xs">View project</Link>
                     </div>
                   </div>                  
                 </div>
